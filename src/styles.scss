@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+button {
+    background-color: rgb(1, 18, 64);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 50px;
+
+    /* when button is disabled */
+    &[disabled]{
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

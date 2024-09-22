@@ -1,0 +1,78 @@
+<!-- popup -->
+
+<div class="popup" *ngIf="show == true">
+ <div (click)="show = false" class="closed">
+X
+ </div>
+
+ <div>
+    <app-update-user [user] = 'user' [updateUser] = 'updateUser' [deleteUser] = 'deleteUser' [addUser] = 'addUser'> </app-update-user>
+    <!-- <app-delete-user [user] = 'user' [deleteUser] = 'deleteUser' *ngIf="deleteUser == true"> </app-delete-user>  -->
+
+ </div>
+
+</div>
+
+
+
+<h2>Users</h2>
+
+
+<div [formGroup] = "myForm" >
+    <div class="search-form" >
+        <input 
+        class = "search-form__txt" 
+        id="txt" 
+        type = "text" 
+        placeholder="Search user..." 
+        formControlName = "txt"
+        [(ngModel)]="userSearch"
+       />
+
+        <!-- search-button -->
+        <button 
+        class = "search-form__btn" 
+        type = "text" 
+        id="btn" 
+        (click) = "search()"> Search</button>
+
+    </div>
+
+    <app-add-user-component></app-add-user-component>
+ 
+    <table>
+        <tr >
+            <div >
+                <tr >
+                    <th >Id</th>
+                    <th >First name</th>
+                    <th>Last name</th>
+                    <th>Age</th>
+                    <th>Role</th>
+                    <th></th>
+                   
+                </tr> 
+            </div>
+    
+            <div *ngFor="let item of userListNew" >
+                
+                <tr >                     
+                    <td > {{item.ID}}</td>
+                    <td > {{item.firstname}}</td>
+                    <td > {{item.lastName}}</td>
+                    <td > {{item.age}}</td>
+                    <td > {{item.role}}</td>
+                    <td (click)="onEdit(item)" > Edit </td>
+                    <td (click)="onDelete(item)" > Delete </td>
+
+            </div> 
+        </tr>
+      
+    </table>
+
+    <span (click)="onAdd(null)" > Add User </span>
+
+
+
+</div>
+

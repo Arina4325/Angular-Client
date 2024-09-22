@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "firstname": "Arina",
+      "lastName": "Leyzer",
+      "age": 18,
+      "role": "Admin",
+      "ID": "123456"
+    },
+    {
+        "firstname": "Mark",
+        "lastName": "Martel",
+        "age": 20,
+        "role": "User",
+        "ID": "654321"
+      },  
+    {
+        "firstname": "Mark",
+        "lastName": "Mark",
+        "age": 40,
+        "role": "User",
+        "ID": "654444"
+      }
+
+]
+
+}
+  

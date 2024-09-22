@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>Add User</h2>
+<mat-dialog-content class="mat-typography" style = "width: min-content;">
+ 
+
+  <form 
+  [formGroup] = 'form'
+  (ngSubmit)="onSubmit()"
+  >
+  
+    <div class="container">
+      <label for="id"><b> ID </b></label>
+      <input type="text" placeholder="Enter your ID" name="id" required formControlName="id">
+
+      <label for="firstname" ><b> First Name </b></label>
+      <input 
+      type="text" 
+      pInputText
+      formControlName="firstname" 
+      placeholder="Enter your first name" 
+      name="firstname" 
+      required>
+
+      <!-- <small
+      *ngIf="!firstname.valid && (firstname.dirty || firstname.touched)">
+      <div *ngIf = "firstname.errors?.['pattern']"> Enter a valid name</div>
+      </small> -->
+
+      <label for="lastname"><b> Last Name </b></label>
+      <input type="text" 
+      pInputText
+      formControlName="lastname" 
+      placeholder="Enter your last name" 
+      name="lastname"
+      required>
+  
+      <label for="age"><b> Age </b></label>
+      <input type="text" 
+      formControlName="age" 
+      placeholder="Enter yuor age" 
+      name="age" 
+      required>
+
+      <label for="role" formControlName="role" required><b> Your Role </b></label>
+      <select 
+      id="role">
+          <option value="choose">Choose your role</option>
+          <option value="guest" >Guest</option>
+          <option value="admin" disabled >Admin</option>
+      </select>
+  
+      <button type="submit" [disabled]="!form.valid"> Create user</button>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+  
+    </div>
+
+  </form>
+
+  
+</mat-dialog-content>
+

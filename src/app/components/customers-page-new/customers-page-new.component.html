@@ -1,0 +1,55 @@
+<p>customers-page-new works!</p>
+
+
+
+<h2>Customers</h2>
+
+<div >
+    <div class="search-form" >
+        <input 
+        class = "search-form__txt" 
+        id="txt" 
+        type = "text" 
+        placeholder="Search customer..." 
+        formControlName = "txt"
+        
+       />
+
+        <!-- search-button -->
+        <button 
+        class = "search-form__btn" 
+        type = "text" 
+        id="btn" 
+        > Search</button>
+
+    </div>
+
+ 
+    <table>
+        <tr >
+            <div >
+                <tr >
+                    <th >First name</th>
+                    <th>Last name</th>
+                    <th>Role</th>
+                    <th >Phone number</th>
+                    <!-- <th >Update customer</th>
+                    <th >Delete customer</th> -->
+                </tr> 
+            </div>
+    
+            <div *ngFor="let item of customers"  >
+                
+                <tr >                     
+                    <td >{{item.firstname}} </td>
+                    <td > {{item.lastname}}</td>
+                    <td > {{item.role}}</td>
+                    <td >{{item.phone}} </td>
+                </tr>
+                  
+
+            </div> 
+        </tr>
+    </table>
+
+</div>

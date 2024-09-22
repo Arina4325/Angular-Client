@@ -1,0 +1,69 @@
+
+<h2 mat-dialog-title>Edit Data</h2>
+<mat-dialog-content class="mat-typography" style = "width: min-content;">
+ 
+  <!-- [formGroup] = 'form' -->
+  <form 
+  
+  (ngSubmit)="onAddItem(f)"
+  #f="ngForm"
+  >
+  
+    <div class="container">
+
+
+      <!-- pInputText
+      formControlName="firstname" -->
+      <label for="firstname" ><b> First Name </b></label>
+      <input 
+      type="text" 
+      id="firstname"
+      placeholder="Enter your first name" 
+      name="firstname" 
+      required
+      ngModel>
+
+      <!-- <small
+      *ngIf="!firstname.valid && (firstname.dirty || firstname.touched)">
+      <div *ngIf = "firstname.errors?.['pattern']"> Enter a valid name</div>
+      </small> -->
+
+      <label for="lastname"><b> Last Name </b></label>
+      <input type="text" 
+      placeholder="Enter your last name" 
+      name="lastname"
+      required
+      ngModel>
+  
+      <label for="phone"><b> Phone number </b></label>
+      <input type="text" 
+      placeholder="Enter your phone number" 
+      name="phone" 
+      required
+      ngModel>
+
+      <label for="role" formControlName="role" required><b> Your Role </b></label>
+      <input type="text" 
+      placeholder="Enter your role" 
+      name="role" 
+      required
+      ngModel>
+
+  
+      <button 
+      type="submit" 
+       
+      [disabled] = "!f.valid"
+      > Edit</button>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+  
+    </div>
+
+  </form>
+
+  
+</mat-dialog-content>
+

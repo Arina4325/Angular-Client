@@ -1,0 +1,53 @@
+  
+
+<h2>Customers</h2>
+
+<div >
+    <div class="search-form" >
+        <input 
+        class = "search-form__txt" 
+        id="txt" 
+        type = "text" 
+        placeholder="Search customer..." 
+        formControlName = "txt"
+        
+       />
+
+        <!-- search-button -->
+        <button 
+        class = "search-form__btn" 
+        type = "text" 
+        id="btn" 
+        
+        > Search</button>
+
+    </div>
+
+ 
+    <table>
+        <tr >
+            <div >
+                <tr >
+                    <th >First name</th>
+                    <th>Last name</th>
+                    <th>Role</th>
+                    <th >Phone number</th>
+                    <th >Update customer</th>
+                    <th >Delete customer</th>
+                </tr> 
+            </div>
+    
+            <!-- <div *ngFor="let item of customers; let i = index" (click)="onEditItem(i)" > -->
+                
+                <tr >                     
+                    <td >{{}} </td>
+                    <td > {{}}</td>
+                    <td > {{}}</td>
+                    <td >{{}} </td>
+                </tr>
+
+            </div> 
+        </tr>
+    </table>
+
+</div>

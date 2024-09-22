@@ -1,0 +1,67 @@
+<p>site-layout works!</p>
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <a routerLink="/login">
+     <img
+     width="200"
+     alt="Bank Logo"
+     src="https://upload.wikimedia.org/wikipedia/he/thumb/5/51/%D7%94%D7%91%D7%A0%D7%A7_%D7%94%D7%91%D7%99%D7%A0%D7%9C%D7%90%D7%95%D7%9E%D7%99.svg/1199px-%D7%94%D7%91%D7%A0%D7%A7_%D7%94%D7%91%D7%99%D7%A0%D7%9C%D7%90%D7%95%D7%9E%D7%99.svg.png?20220608172904"
+   />
+    </a>
+
+    <!-- timer -->
+    <div class="sw-container">
+      <div class="stopwatch">
+        <span>{{hr}} : </span>
+        <span>{{min}} : </span>
+        <span>{{sec}} : </span>
+        <span>{{ms}}</span>
+      </div>
+      <div class="button-container">
+        <button class="bt-play-pause ripple" (click)="start()">
+          <i *ngIf="!running" class="play">Play</i>
+          <i *ngIf="running" class="pause">Pause</i>
+        </button>
+        <button (click)="reset()"> X </button>
+      </div>
+
+    </div>
+   <!-- timer -->
+     
+       <div class="spacer"></div>
+   
+       <ul>
+         <li> <a routerLink="/users" title="login">Users</a></li>
+         <li> <a routerLink="/customers"  title="registration">Customers</a></li>
+       </ul>
+
+   
+   </div>
+ 
+
+   
+   <!-- body -->
+   <div class="content" role="main">
+
+    <div  class="toolbarsmall" role="banner">
+      <div class="spacer"></div>
+       <span>You are authorised user</span>
+       <div class="spacer"></div>
+       <button (click)="logout()">Logout</button>
+      
+    </div>
+    
+   
+     
+     <router-outlet></router-outlet>
+   
+   
+     <!-- Footer -->
+     <footer>
+         Arina Leyzer&nbsp;| 2024
+         
+     </footer>
+     
+   </div>
+   
+ 

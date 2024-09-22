@@ -1,0 +1,33 @@
+<p>delete-user works!</p>
+<form class="form-container"
+[formGroup] = 'form'
+    >
+
+  <label for="ID" ><b> ID </b></label>
+  <input 
+  type="text" 
+  pInputText
+  formControlName="ID" 
+  placeholder="ID" 
+  name="ID" 
+  required>
+           
+      <label for="firstname" ><b> First Name </b></label>
+      <input 
+      type="text" 
+      pInputText
+      formControlName="firstname" 
+      placeholder="Enter your first name" 
+      name="firstname" 
+      required>
+
+     
+
+        <button type="submit" (click)="save()"> {{txtButton}} </button>
+      
+        <button type="button" class="cancelbtn" >Cancel</button>
+
+  
+    </form>
+
+

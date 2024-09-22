@@ -1,0 +1,45 @@
+
+<form  
+[formGroup] = 'form'
+(ngSubmit)="onSubmit()"
+>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+
+      <input 
+      formControlName="username"
+      type="text" 
+      placeholder="Enter Username" 
+      name="uname" 
+      >
+  
+      <label for="psw"><b>Password</b></label>
+      <input 
+      formControlName="password"
+      type="password" 
+      placeholder="Enter Password" 
+      name="psw"
+      >
+     
+      <button
+       type="submit"
+       [disabled] = "!form.valid"
+       >Login</button>
+       <!-- {{form.value | json}} -->
+    </div>
+   
+    <!-- button canselled + forgot password
+  
+     <div class="container" style="background-color:#f1f1f1">
+      <button 
+      type="button" 
+      class="cancelbtn"
+      >Cancel</button>
+
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>  -->
+
+  </form>
+  <span class = 'container' *ngIf = '!form.touched'>Enter your username and password</span>
+  
